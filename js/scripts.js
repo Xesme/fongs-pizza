@@ -21,26 +21,26 @@ Pizza.prototype.orderPizza = function() {
 }
 
 //User Interface Logic
-// $(document).ready(function(){
-//   $("#order").submit(function(event){
-//     event.preventDefault();
-//
-//     $("#pizza-size").show();
-//     var size = $("input:radio[name=size]:checked").val();
-//
-//
-//     $("#toppings").show();
-//     var toppings = $("input:radio[name=toppings]:checked").val();
-//
-//      var newPizza = new Pizza(size, toppings)
-//      newPizza.orderPizza()
-//
-//     //  alert(newPizza);
-//
-//      $("#display-order ul").append("<li>" + newPizza.size + "<li>");
-//      $("#display-order ul").append("<li>" + newPizza.toppings + "</li>");
-//      $("#display-order ul").append("<li>" + "$" +  newPizza.price + "</li>");
-//    });
-//
-//
-//   });
+$(document).ready(function(){
+  $("#order").submit(function(event){
+    event.preventDefault();
+
+    $("#pizza-size").show();
+    var size = $("input:radio[name=size]:checked").val();
+
+
+    $("#toppings").show();
+    var toppings = $("input:radio[name=toppings]:checked").val();
+
+     var newPizza = new Pizza(size, toppings)
+     newPizza.orderPizza()
+
+    //  alert(newPizza);
+
+     $("#display-order ul").append("<li>" + newPizza.size + "<li>");
+     $("#display-order ul").append("<li>" + newPizza.toppings + "</li>");
+     $("#display-order ul").append("<li>" + "$" +  newPizza.price + "</li>");
+   });
+
+
+  });
