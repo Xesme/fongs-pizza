@@ -1,11 +1,21 @@
 // Business Logic
 
-function Pizza(size, toppings, cbox, price) {
+function Pizza(size, extra, toppings, price) {
   this.size = size;
+  this.extra = extra;
   this.toppings = toppings;
-  this.cbox = cbox
   this.price = price;
 }
+
+function checkboxLoop() {
+  for(var i = 0; i < toppings.input.length; i++) {
+    if (this.toppings === true) {
+      this.price +=2 ;
+    }
+    return this.price;
+  }
+
+
 
 Pizza.prototype.orderPizza = function() {
   this.price =0;
@@ -16,8 +26,9 @@ Pizza.prototype.orderPizza = function() {
  } else if (this.size === "large") {
    this.price += 20;
  }
- if (this.toppings === "mushroom") {
-   this.price += 1;
+
+ if (this.extra === "Extra Cheese") {
+   this.price += 2;
  }
 }
 
@@ -29,19 +40,20 @@ $(document).ready(function(){
     $("#pizza-size").show();
     var size = $("input:radio[name=size]:checked").val();
 
-
     $("#toppings").show();
-    var toppings = $("input:radio[name=toppings]:checked").val();
+    var toppings = $("input:checkbox[name=toppings]:checked").val();
 
-     var newPizza = new Pizza(size, toppings, cbox)
+    $("#extra").show();
+    var extra = $("input:radio[name=extra]:checked").val();
+
+     var newPizza = new Pizza(size, extra, toppings)
      newPizza.orderPizza()
 
     //  alert(newPizza);
 
      $("#display-order ul").append("<li>" + newPizza.size + "</li>");
+     $("#display-order ul").append("<li>" + newPizza.extra + "</li>");
      $("#display-order ul").append("<li>" + newPizza.toppings + "</li>");
      $("#display-order ul").append("<li>" + "$" +  newPizza.price + "</li>");
    });
-
-
   });
