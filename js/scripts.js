@@ -1,8 +1,9 @@
 // Business Logic
 
-function Pizza(size, toppings, price) {
+function Pizza(size, toppings, cbox, price) {
   this.size = size;
   this.toppings = toppings;
+  this.cbox = cbox
   this.price = price;
 }
 
@@ -32,12 +33,12 @@ $(document).ready(function(){
     $("#toppings").show();
     var toppings = $("input:radio[name=toppings]:checked").val();
 
-     var newPizza = new Pizza(size, toppings)
+     var newPizza = new Pizza(size, toppings, cbox)
      newPizza.orderPizza()
 
     //  alert(newPizza);
 
-     $("#display-order ul").append("<li>" + newPizza.size + "<li>");
+     $("#display-order ul").append("<li>" + newPizza.size + "</li>");
      $("#display-order ul").append("<li>" + newPizza.toppings + "</li>");
      $("#display-order ul").append("<li>" + "$" +  newPizza.price + "</li>");
    });
