@@ -27,7 +27,7 @@ Pizza.prototype.orderPizza = function() {
    this.price += 20;
  }
 
- if (this.extra === "Extra Cheese") {
+ if (this.extra === "extra cheese") {
    this.price += 2;
  }
 }
