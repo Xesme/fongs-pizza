@@ -7,23 +7,13 @@ function Pizza(size, sauce, extra, price) {
   this.price = price;
 }
 
-// var cbox = function() {
-//   for(var i = 0; i < toppings.input.length; i++) {
-//     if (this.toppings === true) {
-//       this.price +=2 ;
-//     }
-//     return this.price;
-//   }
-
-
-
 Pizza.prototype.orderPizza = function() {
   this.price =0;
-  if (this.size === "small"){
+  if (this.size === "small(10')"){
    this.price += 16;
- } else if (this.size === "medium") {
+ } else if (this.size === "medium(12')") {
    this.price += 18;
- } else if (this.size === "large") {
+ } else if (this.size === "large(14')") {
    this.price += 20;
  }
 
@@ -43,20 +33,17 @@ $(document).ready(function(){
     $("#pizza-sauce").show();
     var sauce = $("input:radio[name=sauce]:checked").val();
 
-    var choices = [ ];
+    $("#extra").show();
+    var extra = $("input:radio[name=extra]:checked").val();
+
+    var choices = [];
     var tops = document.getElementsByName('toppings');
     for (var i = 0;i < tops.length; i++){
       if ( tops[i].checked ) {
         choices.push(tops[i].value);
       }
     }
-    //
-    // $("#toppings").show();
-    // var toppings = $("input:checkbox[name=toppings]:checked").val();
-
-    $("#extra").show();
-    var extra = $("input:radio[name=extra]:checked").val();
-
+    
     var newPizza = new Pizza(size, sauce, extra, toppings)
     newPizza.orderPizza()
 
