@@ -51,8 +51,8 @@ $(document).ready(function(){
       }
     }
     //
-    $("#toppings").show();
-    var toppings = $("input:checkbox[name=toppings]:checked").val();
+    // $("#toppings").show();
+    // var toppings = $("input:checkbox[name=toppings]:checked").val();
 
     $("#extra").show();
     var extra = $("input:radio[name=extra]:checked").val();
