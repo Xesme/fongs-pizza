@@ -52,13 +52,13 @@ $(document).ready(function(){
     $("#extra").show();
     var extra = $("input:radio[name=extra]:checked").val();
 
-     var newPizza = new Pizza(size, sauce, extra, toppings)
-     newPizza.orderPizza()
+    var newPizza = new Pizza(size, sauce, extra, toppings)
+    newPizza.orderPizza()
 
-     $("#display-order ul").append("<li>" + newPizza.size + "</li>");
-     $("#display-order ul").append("<li>" + newPizza.sauce + "</li>");
-     $("#display-order ul").append("<li>" + newPizza.extra + "</li>");
-     $("#display-order ul").append("<li>" + newPizza.toppings + "</li>");
-     $("#display-order ul").append("<li>" + "$" +  newPizza.price + "</li>");
+    $("#display-order ul").append("<li>" + newPizza.size + "</li>");
+    $("#display-order ul").append("<li>" + newPizza.sauce + "</li>");
+    $("#display-order ul").append("<li>" + newPizza.extra + "</li>");
+    $("#display-order ul").append("<li>" + newPizza.toppings + "</li>");
+    $("#display-order ul").append("<li>" + "$" +  newPizza.price + "</li>");
    });
   });
