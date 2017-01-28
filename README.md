@@ -28,7 +28,7 @@ Behavior | Input | Output
 
 ##Known Bugs:
 
-There is a bug with the checkboxes for toppings.
+There are no known bugs at this time.
 
 ##Support and Contact Details:
 
