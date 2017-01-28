@@ -15,11 +15,7 @@ This webpage features and ordering page from Fong's Pizzeria! It allows the user
 ##Specifications:
 Behavior | Input | Output
 ------------ | ------------- | -------------
-When a string containing a number is entered it is converted to a integer| "5" | 5
-Numbers divisible by 3 will return with a string containing "ping" | 3 | "ping"
-Numbers divisible by 5 will return with a string containing "pong" | 5 | "pong"
-Numbers divisible by 15 will return with a string containing "ping-pong" | 15 | "ping-pong"
-The program will count up to the number provided insert "ping", "pong", or "ping-pong"| 5 | [1, 2, "ping", 4, "pong"]
+
 
 
 ##Setup and Installation Requirements:
