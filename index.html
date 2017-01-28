@@ -12,6 +12,7 @@
   </head>
   <body>
     <div class="container">
+      <img src="img/logo.png" alt="A photo of Fong's logo">
       <div class="order-form-box">
         <form id="order">
           <div id="pizza-size">
@@ -22,6 +23,16 @@
             medium
             <input type="radio" name="size" value="large">
             large
+          </div>
+          <!-- sauce  -->
+          <div id="pizza-sauce">
+            <p><strong>Choose a sauce:</strong></p>
+            <input type="radio" name="sauce" value="soy sauce">
+            soy sauce
+            <input type="radio" name="sauce" value="kung pao garlic sauce">
+            kung pao garlic sauce
+            <input type="radio" name="sauce" value="tomato sauce">
+            tomato sauce
           </div>
           <!-- radio  -->
           <strong>Would you like extra cheese for $2.00?</strong></p>
@@ -34,10 +45,16 @@
           <strong>Choose your toppings:</strong></p>
           <div id="toppings">
             <label for="toppings">
-            Black Olives
-            <input type="checkbox" name="toppings" value="black olives">
-            Spinach
-            <input type="checkbox" name="toppings" value="spinach">
+            general tso's chicken
+            <input type="checkbox" name="toppings" value="bgeneral tso's chicken">
+            royal beef
+            <input type="checkbox" name="toppings" value="royal beef">
+            wonton strips
+            <input type="checkbox" name="toppings" value="wonton strips">
+            chop suey
+            <input type="checkbox" name="toppings" value="chop suey">
+            mongolian beef
+            <input type="checkbox" name="toppings" value="mongolian beef">
             </label>
           </div>
           <button type="submit" name="button">add to order</button>

@@ -1,0 +1,16 @@
+body {
+  background-image: url("../img/background3.jpeg");
+  background-repeat: repeat;
+}
+
+form {
+  background-color: #fff;
+  height: 350px;
+  padding: 40px;
+  border-radius: 15px;
+}
+
+img {
+  height: 300px;
+
+}
