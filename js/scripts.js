@@ -24,9 +24,9 @@ Pizza.prototype.orderPizza = function() {
 
  if (this.extra === "extra cheese") {
    this.price += 2;
-   this.extra = "Yes extra cheese!";
+   this.extra = "Yes!";
  } else if (this.extra != "extra cheese") {
-   this.extra = "No extra cheese!";
+   this.extra = "No!";
  }
 
  if (this.sauce === "kung pao garlic sauce") {
@@ -64,7 +64,7 @@ $(document).ready(function(){
 
     $("#display-order ul").append("<li>" +"Size:"+ " " + newPizza.size + "</li>");
     $("#display-order ul").append("<li>" +"Sauce:"+ " "  + newPizza.sauce + "</li>");
-    $("#display-order ul").append("<li>" + " "  + newPizza.extra + "</li>");
+    $("#display-order ul").append("<li>" + "Extra cheese:" + " " + newPizza.extra + "</li>");
     $("#display-order ul").append("<li>" +"Toppings:"+ " "  +  newPizza.tops + "</li>");
     $("#display-order ul").append("<li>" +"Total:"+ " "  + "$" +  newPizza.price + "</li>");
   });

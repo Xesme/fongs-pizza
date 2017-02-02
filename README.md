@@ -15,6 +15,16 @@ This webpage features and ordering page from Fong's Pizzeria! It allows the user
 ##Specifications:
 Behavior | Input | Output
 ------------ | ------------- | -------------
+User can select a size of pizza | small(10")| $16
+User can select a size of pizza with sauce | medium(12") with soy sauce| $18
+User can select a size of pizza with a premium sauce | large(14") with kung pao garlic sauce| $21
+User can select a size of pizza with extra cheese | small(10") with extra cheese| $18
+User can select a size of pizza with sauce and one topping | small(10") with soy sauce, and wonton strips| $17
+User can select a size of pizza with sauce and three toppings | medium(12") with soy sauce, wonton strips, kung pao chicken, and chop suey| $21
+User can view order total and details of new pizza in ul | small(10") with no suace, extra cheese, chop suey, and wonton strips | size: small(10"); sauce: no sauce; extra cheese: yes!; toppings: chop suey, wonton strips ; total: $20
+
+
+
 
 
 
