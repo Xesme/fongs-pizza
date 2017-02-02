@@ -1,15 +1,20 @@
 // Business Logic
+var tops = [];
 
-function Pizza(size, sauce, extra, price) {
+
+function Pizza(size, sauce, tops, extra, price) {
   this.size = size;
   this.sauce = sauce;
   this.extra = extra;
   this.price = price;
+  this.tops = tops;
 }
 
 Pizza.prototype.orderPizza = function() {
   this.price =0;
-  if (this.size === "small(10')"){
+
+
+  if (this.size === "small(10')") {
    this.price += 16;
  } else if (this.size === "medium(12')") {
    this.price += 18;
@@ -19,7 +24,18 @@ Pizza.prototype.orderPizza = function() {
 
  if (this.extra === "extra cheese") {
    this.price += 2;
+   this.extra = "Yes extra cheese!";
+ } else if (this.extra != "extra cheese") {
+   this.extra = "No extra cheese!";
  }
+
+ if (this.sauce === "kung pao garlic sauce") {
+   this.price += 1;
+ }
+
+ for (var i = 0; i < this.tops.length; i++) {
+      this.price += 1;
+  }
 }
 
 //User Interface Logic
@@ -36,21 +52,21 @@ $(document).ready(function(){
     $("#extra").show();
     var extra = $("input:radio[name=extra]:checked").val();
 
-    var choices = [];
-    var tops = document.getElementsByName('toppings');
-    for (var i = 0;i < tops.length; i++){
-      if ( tops[i].checked ) {
-        choices.push(tops[i].value);
+    var toppings = document.getElementsByName('toppings');
+    for (var i = 0; i < toppings.length; i++){
+      if ( toppings[i].checked ) {
+        tops.push(toppings[i].value);
       }
     }
-    
-    var newPizza = new Pizza(size, sauce, extra, toppings)
+
+    var newPizza = new Pizza(size, sauce, tops, extra)
     newPizza.orderPizza()
 
     $("#display-order ul").append("<li>" +"Size:"+ " " + newPizza.size + "</li>");
     $("#display-order ul").append("<li>" +"Sauce:"+ " "  + newPizza.sauce + "</li>");
-    $("#display-order ul").append("<li>" +"Yes!"+ " "  + newPizza.extra + "</li>");
-    $("#display-order ul").append("<li>" +"Toppings:"+ " "  +  choices + "</li>");
+    $("#display-order ul").append("<li>" + " "  + newPizza.extra + "</li>");
+    $("#display-order ul").append("<li>" +"Toppings:"+ " "  +  newPizza.tops + "</li>");
     $("#display-order ul").append("<li>" +"Total:"+ " "  + "$" +  newPizza.price + "</li>");
-   });
+  });
+
 });
