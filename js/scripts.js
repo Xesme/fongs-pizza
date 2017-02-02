@@ -1,7 +1,6 @@
 // Business Logic
 var tops = [];
 
-
 function Pizza(size, sauce, tops, extra, price) {
   this.size = size;
   this.sauce = sauce;
@@ -12,7 +11,6 @@ function Pizza(size, sauce, tops, extra, price) {
 
 Pizza.prototype.orderPizza = function() {
   this.price =0;
-
 
   if (this.size === "small(10')") {
    this.price += 16;
@@ -68,5 +66,4 @@ $(document).ready(function(){
     $("#display-order ul").append("<li>" +"Toppings:"+ " "  +  newPizza.tops + "</li>");
     $("#display-order ul").append("<li>" +"Total:"+ " "  + "$" +  newPizza.price + "</li>");
   });
-
 });
